@@ -102,7 +102,7 @@
                            (notes (clojure.string/join " " (m :rest)))
                            {:reply "Hello!"
                             :context :greetings
-                            :data m}))))
+                            :data (if (m :rest) (m :rest) "greetings")}))))
 
 (def all-rules [greetings notes])
 
